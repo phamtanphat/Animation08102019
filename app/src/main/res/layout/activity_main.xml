@@ -13,20 +13,22 @@
        android:layout_width="50dp"
        android:layout_height="50dp"/>
    <ImageView
-       android:layout_marginTop="-35dp"
        android:id="@+id/imageviewScale2"
-       android:layout_centerHorizontal="true"
        android:scaleType="centerInside"
        android:src="@drawable/hinhicongrab2"
        android:layout_below="@id/imageviewScale1"
-       android:layout_width="100dp"
-       android:layout_height="100dp"/>
+       android:layout_width="50dp"
+       android:layout_height="50dp"/>
    <ImageView
        android:id="@+id/imageviewScale1"
-       android:layout_centerInParent="true"
        android:scaleType="centerInside"
        android:src="@drawable/hinhicongrab1"
-       android:layout_width="200dp"
-       android:layout_height="200dp"/>
-
+       android:layout_width="50dp"
+       android:layout_height="50dp"/>
+   <ImageView
+       android:src="@drawable/ic_motor_sports"
+       android:layout_below="@id/imageviewScale2"
+       android:id="@+id/imageviewTranslate"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"/>
 </RelativeLayout>

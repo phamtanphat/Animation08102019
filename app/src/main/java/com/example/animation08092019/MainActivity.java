@@ -14,7 +14,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imgAlpha,imgScale1,imgScale2;
+    ImageView imgAlpha,imgScale1,imgScale2,imgTranSlate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         imgAlpha = findViewById(R.id.imageviewAlpha);
         imgScale1 = findViewById(R.id.imageviewScale1);
         imgScale2 = findViewById(R.id.imageviewScale2);
+        imgTranSlate = findViewById(R.id.imageviewTranslate);
 
         imgScale2.setVisibility(View.GONE);
 
@@ -43,21 +44,30 @@ public class MainActivity extends AppCompatActivity {
         //2 : Scale
         // pivotx < 50 : thi scale qua phai va nguoc lai
         // pivoty < 50 : thi scale xuong duoi va nguoc lai
-        final Animation animationScale = AnimationUtils.loadAnimation(this,R.anim.anim_scale);
-        final Animation animationAlphaGrab = AnimationUtils.loadAnimation(this,R.anim.anim_alpha);
+//        final Animation animationScale = AnimationUtils.loadAnimation(this,R.anim.anim_scale);
+//        final Animation animationAlphaGrab = AnimationUtils.loadAnimation(this,R.anim.anim_alpha);
+//
+//        imgScale1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                v.startAnimation(animationScale);
+//                Handler handler = new Handler();
+//                handler.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        imgScale2.setVisibility(View.VISIBLE);
+//                        imgScale2.startAnimation(animationAlphaGrab);
+//                    }
+//                },animationScale.getDuration());
+//            }
+//        });
+        //3 : translate
+        final Animation animationTranSlate = AnimationUtils.loadAnimation(this,R.anim.anim_translate);
 
-        imgScale1.setOnClickListener(new View.OnClickListener() {
+        imgTranSlate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.startAnimation(animationScale);
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        imgScale2.setVisibility(View.VISIBLE);
-                        imgScale2.startAnimation(animationAlphaGrab);
-                    }
-                },animationScale.getDuration());
+                v.startAnimation(animationTranSlate);
             }
         });
 
